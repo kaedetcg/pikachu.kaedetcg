@@ -128,7 +128,7 @@ details[open] summary::after { content: "▲"; }
 
 /* --- 1. BECKETT (BGS) DROPDOWN BOX --- */
 details.bgs-dropdown {
-  background-color: rgba(0, 0, 0, 0.85); /* Opaque black background */
+  background-color: transparent; 
   border: 4px solid #D4AF37;              /* Gold border */
 }
 details.bgs-dropdown summary {
@@ -197,7 +197,7 @@ details.cgc-dropdown summary::after {
 /* --- BGS INNER BUTTONS --- */
 .btn-bgs-blacklabel {
   background-color: #000000;             /* Solid black background */
-  color: #D4AF37;                         /* White wording */
+  color: #D4AF37;                         /* Gold wording */
   border: 2px solid #333333;
 }
 
