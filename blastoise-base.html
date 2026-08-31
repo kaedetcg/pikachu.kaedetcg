@@ -17,16 +17,21 @@
       background-color: #121212;
     }
 
-    /* Fixed Background Image with 20% Opacity */
+    /* Fixed Background Card: 100vh height, proportional width, 0.2 opacity */
     body::before {
       content: "";
       position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background-image: url('images/charizard-base.jpg'); /* Dynamic card image path */
-      background-size: cover;
+      top: 0; 
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100vh; /* Full viewport height */
+      width: auto;   /* Proportional width */
+      aspect-ratio: 2.5 / 3.5; /* Standard trading card aspect ratio */
+      background-image: url('images/charizard-base.jpg'); /* Card Image Path */
+      background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      opacity: 0.20;
+      opacity: 0.20; /* 20% Opacity */
       z-index: -1;
     }
 
@@ -39,7 +44,7 @@
       align-items: center;
     }
 
-    /* Logo as a clickable link */
+    /* Logo Link */
     .logo-link {
       display: inline-block;
       margin-bottom: 8px;
@@ -66,32 +71,27 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 20px;
     }
 
-    /* Section Styling */
-    .section-block {
+    /* Section Header with Top Transparent Separator Line */
+    .section-header {
       width: 100%;
-      background-color: rgba(30, 30, 30, 0.85);
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      overflow: hidden;
-      backdrop-filter: blur(5px);
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2); /* Semi-transparent line */
+      margin-bottom: 8px;
     }
 
-    .section-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      padding: 14px;
-      background-color: rgba(45, 45, 45, 0.9);
-      color: #ffffff;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    .section-title-text {
+      font-size: 1.2rem;
+      font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
     }
 
     .section-content {
-      padding: 12px;
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -99,10 +99,11 @@
 
     /* Accordion / Dropdown Styling */
     details {
-      background-color: rgba(20, 20, 20, 0.6);
+      background-color: rgba(20, 20, 20, 0.7);
       border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       overflow: hidden;
+      backdrop-filter: blur(4px);
     }
     summary {
       padding: 12px;
@@ -122,6 +123,14 @@
     }
     details[open] summary::after { content: "▲"; }
 
+    .dropdown-content {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
     /* Button Styling */
     .btn {
       display: block;
@@ -133,17 +142,22 @@
       font-size: 0.9rem;
       border-radius: 6px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-      transition: transform 0.1s ease, filter 0.15s ease;
+      transition: transform 0.1s ease;
     }
     .btn:active { transform: scale(0.98); }
 
-    /* Specific Button Colors */
+    /* Button Colors */
     .btn-raw { background-color: #2e7d32; color: #ffffff; }
     .btn-bgs { background-color: #1565c0; color: #ffffff; }
     .btn-psa { background-color: #c62828; color: #ffffff; }
     .btn-cgc { background-color: #f57f17; color: #ffffff; }
 
-    /* Home Section Button */
+    /* Home Button Section */
+    .home-section {
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      margin-top: 10px;
+    }
     .home-btn {
       display: block;
       width: 100%;
@@ -163,71 +177,29 @@
 <body>
 
   <div class="container">
-    <!-- 1. Logo (Clickable Link to Home) -->
     <a href="index.html" class="logo-link">
       <img src="images/logo.png" alt="Business Logo" class="logo">
     </a>
 
-    <!-- Card Name -->
     <h1 class="card-name">1st Edition Charizard #4</h1>
 
     <div class="sections-wrapper">
       
-      <!-- SECTION 1: RAW CARDS -->
-      <div class="section-block">
-        <div class="section-title">Raw Cards</div>
+      <div>
+        <div class="section-header">
+          <span class="section-title-text">Raw</span>
+        </div>
         <div class="section-content">
           <a href="https://www.ebay.com" target="_blank" class="btn btn-raw">All Raw Cards</a>
         </div>
       </div>
 
-      <!-- SECTION 2: GRADED SLABS -->
-      <div class="section-block">
-        <div class="section-title">Graded Slabs</div>
+      <div>
+        <div class="section-header">
+          <span class="section-title-text">Graded</span>
+        </div>
         <div class="section-content">
           
-          <!-- Beckett Dropdown -->
           <details>
             <summary>BECKETT (BGS)</summary>
-            <div class="section-content">
-              <a href="https://www.ebay.com" target="_blank" class="btn btn-bgs">BLACK LABEL 10</a>
-              <a href="https://www.ebay.com" target="_blank" class="btn btn-bgs">BGS PRISTINE 10</a>
-              <a href="https://www.ebay.com" target="_blank" class="btn btn-bgs">ALL BGS slabs</a>
-            </div>
-          </details>
-
-          <!-- PSA Dropdown -->
-          <details>
-            <summary>PSA</summary>
-            <div class="section-content">
-              <a href="https://www.ebay.com" target="_blank" class="btn btn-psa">PSA GEM MINT 10</a>
-              <a href="https://www.ebay.com" target="_blank" class="btn btn-psa">PSA MINT 9</a>
-              <a href="https://www.ebay.com" target="_blank" class="btn btn-psa">ALL PSA slabs</a>
-            </div>
-          </details>
-
-          <!-- CGC Dropdown -->
-          <details>
-            <summary>CGC</summary>
-            <div class="section-content">
-              <a href="https://www.ebay.com" target="_blank" class="btn btn-cgc">CGC PRISTINE 10</a>
-              <a href="https://www.ebay.com" target="_blank" class="btn btn-cgc">CGC GEM MINT 10</a>
-              <a href="https://www.ebay.com" target="_blank" class="btn btn-cgc">ALL CGC slabs</a>
-            </div>
-          </details>
-
-        </div>
-      </div>
-
-      <!-- SECTION 3: RETURN HOME -->
-      <div class="section-block">
-        <div class="section-content">
-          <a href="index.html" class="home-btn">← RETURN HOME</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-</body>
-</html>
+            <div class="dropdown
