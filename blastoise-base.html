@@ -3,188 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charizard #4 Base Set | PokéCard Vault</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      color: #ffffff;
-      position: relative;
-      background-color: #121212;
-    }
-
-    /* Fixed Background Card: 100vh height, proportional width, 0.2 opacity */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; 
-      left: 50%;
-      transform: translateX(-50%);
-      height: 100vh; /* Full viewport height */
-      width: auto;   /* Proportional width */
-      aspect-ratio: 2.5 / 3.5; /* Standard trading card aspect ratio */
-      background-image: url('images/282 sm-p.webp'); /* Card Image Path */
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      opacity: 0.20; /* 20% Opacity */
-      z-index: -1;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 480px;
-      padding: 24px 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* Logo Link */
-    .logo-link {
-      display: inline-block;
-      margin-bottom: 8px;
-      transition: transform 0.15s ease;
-    }
-    .logo-link:active { transform: scale(0.95); }
-    .logo {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-    }
-
-    /* Card Name Header */
-    .card-name {
-      font-size: 1.4rem;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 24px;
-      color: #FFCB05;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-    }
-
-    .sections-wrapper {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    /* Section Header with Top Transparent Separator Line */
-    .section-header {
-      width: 100%;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255, 255, 255, 0.2); /* Semi-transparent line */
-      margin-bottom: 8px;
-    }
-
-    .section-title-text {
-      font-size: 1.2rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #ffffff;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-    }
-
-    .section-content {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    /* Accordion / Dropdown Styling */
-    details {
-      background-color: rgba(20, 20, 20, 0.7);
-      border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      overflow: hidden;
-      backdrop-filter: blur(4px);
-    }
-    summary {
-      padding: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      list-style: none;
-      color: #e0e0e0;
-    }
-    summary::-webkit-details-marker { display: none; }
-    summary::after {
-      content: "▼";
-      font-size: 0.75rem;
-      color: #888;
-    }
-    details[open] summary::after { content: "▲"; }
-
-    .dropdown-content {
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-
-    /* Button Styling */
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      text-align: center;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      border-radius: 6px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-      transition: transform 0.1s ease;
-    }
-    .btn:active { transform: scale(0.98); }
-
-    /* Button Colors */
-    .btn-raw { background-color: #2e7d32; color: #ffffff; }
-    .btn-bgs { background-color: #1565c0; color: #ffffff; }
-    .btn-psa { background-color: #c62828; color: #ffffff; }
-    .btn-cgc { background-color: #f57f17; color: #ffffff; }
-
-    /* Home Button Section */
-    .home-section {
-      padding-top: 16px;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-      margin-top: 10px;
-    }
-    .home-btn {
-      display: block;
-      width: 100%;
-      padding: 14px;
-      background-color: #ffffff;
-      color: #111111;
-      text-align: center;
-      text-decoration: none;
-      font-weight: 700;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-      transition: background 0.2s ease;
-    }
-    .home-btn:active { background-color: #e0e0e0; }
-  </style>
+  <title>Base Set Charizard #4 | PokéCard Vault</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<!-- Image path is set directly on the body tag below -->
+<body style="--bg-image: url('images/282 sm-p.webp');">
 
   <div class="container">
+    <!-- Logo Link to Home -->
     <a href="index.html" class="logo-link">
       <img src="images/logo.jpg" alt="Business Logo" class="logo">
     </a>
 
-    <h1 class="card-name">Yokohama's Pikachu SM-P 282/SM-P</h1>
+    <!-- Card Name Header -->
+    <h1 class="card-name">Yohohama's Pikachu</h1>
+    <h1 class="card-name">SM-P 282/SM-P</h1>
 
     <div class="sections-wrapper">
       
+      <!-- SECTION 1: RAW -->
       <div>
         <div class="section-header">
           <span class="section-title-text">Raw</span>
@@ -194,12 +31,14 @@
         </div>
       </div>
 
+      <!-- SECTION 2: GRADED -->
       <div>
         <div class="section-header">
           <span class="section-title-text">Graded</span>
         </div>
         <div class="section-content">
           
+          <!-- Beckett Dropdown -->
           <details>
             <summary>BECKETT (BGS)</summary>
             <div class="dropdown-content">
@@ -209,6 +48,7 @@
             </div>
           </details>
 
+          <!-- PSA Dropdown -->
           <details>
             <summary>PSA</summary>
             <div class="dropdown-content">
@@ -218,6 +58,7 @@
             </div>
           </details>
 
+          <!-- CGC Dropdown -->
           <details>
             <summary>CGC</summary>
             <div class="dropdown-content">
@@ -230,6 +71,7 @@
         </div>
       </div>
 
+      <!-- SECTION 3: RETURN HOME -->
       <div class="home-section">
         <a href="index.html" class="home-btn">← RETURN HOME</a>
       </div>
