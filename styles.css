@@ -57,7 +57,7 @@ body::before {
 /* Card Name Header */
 .card-name {
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 500; /* Made thinner */
   text-align: center;
   margin-bottom: 24px;
   color: #FFCB05;
@@ -69,7 +69,7 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  text-align: center; /* Centering sections */
+  text-align: center;
 }
 
 /* Section Header with Top Transparent Line Separator */
@@ -83,7 +83,7 @@ body::before {
 
 .section-title-text {
   font-size: 1.2rem;
-  font-weight: 800;
+  font-weight: 500; /* Made thinner */
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: #ffffff;
@@ -93,85 +93,120 @@ body::before {
 .section-content {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   align-items: center;
 }
 
-/* Accordion / Dropdown Styling */
+/* Accordion / Dropdown Base Styling */
 details {
   width: 100%;
-  background-color: rgba(20, 20, 20, 0.7);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Thin border */
+  border-radius: 20px; /* Matching rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.15);
   overflow: hidden;
   backdrop-filter: blur(4px);
+  transition: transform 0.1s ease;
 }
 
 summary {
-  padding: 14px;
-  font-weight: 600;
+  padding: 24px 14px; /* Doubled height to match buttons */
+  font-weight: 400;   /* Made thinner */
+  font-size: 1rem;
   cursor: pointer;
   display: flex;
-  justify-content: center; /* Center dropdown header text */
+  justify-content: center;
   align-items: center;
   position: relative;
   list-style: none;
-  color: #e0e0e0;
 }
 summary::-webkit-details-marker { display: none; }
 summary::after {
   content: "▼";
   font-size: 0.75rem;
-  color: #888;
   position: absolute;
-  right: 16px; /* Keep arrow anchored on the right while text stays centered */
+  right: 20px;
 }
 details[open] summary::after { content: "▲"; }
 
-.dropdown-content {
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background-color: rgba(0, 0, 0, 0.3);
+/* Dropdown Specific Brand Colors */
+details.bgs-dropdown {
+  background-color: #D4AF37;
+  border-color: rgba(212, 175, 55, 0.6);
+}
+details.bgs-dropdown summary {
+  color: #111111; /* Dark text for contrast on gold */
+}
+details.bgs-dropdown summary::after {
+  color: #111111;
 }
 
-/* Rounded Buttons with Thin Border */
+details.psa-dropdown {
+  background-color: #0D2C54;
+  border-color: rgba(13, 44, 84, 0.6);
+}
+details.psa-dropdown summary {
+  color: #ffffff;
+}
+details.psa-dropdown summary::after {
+  color: #ffffff;
+}
+
+details.cgc-dropdown {
+  background-color: #D32F2F;
+  border-color: rgba(211, 47, 47, 0.6);
+}
+details.cgc-dropdown summary {
+  color: #ffffff;
+}
+details.cgc-dropdown summary::after {
+  color: #ffffff;
+}
+
+.dropdown-content {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: rgba(0, 0, 0, 0.4); /* Darkened inner drawer background */
+}
+
+/* Double Height Buttons with Thinner Text */
 .btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  padding: 12px;
+  padding: 24px 12px; /* Doubled height (was 12px) */
   text-align: center;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  border-radius: 20px; /* Rounder corners */
-  border: 1px solid rgba(255, 255, 255, 0.25); /* Thin subtle border */
+  font-weight: 400;   /* Thinner wording */
+  font-size: 0.95rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-  transition: transform 0.1s ease, filter 0.15s ease;
+  transition: transform 0.1s ease;
 }
 .btn:active { transform: scale(0.98); }
 
-/* Custom Brand Color Assignments */
+/* Inner Dropdown Link Button Colors */
 .btn-raw { 
   background-color: #2e7d32; 
   color: #ffffff; 
 }
 
 .btn-bgs { 
-  background-color: #D4AF37; /* Golden color */
-  color: #111111;            /* Dark text for gold background contrast */
+  background-color: #D4AF37; 
+  color: #111111;            
   border: 1px solid rgba(212, 175, 55, 0.5);
 }
 
 .btn-psa { 
-  background-color: #0D2C54; /* Darker blue */
+  background-color: #0D2C54; 
   color: #ffffff; 
   border: 1px solid rgba(13, 44, 84, 0.6);
 }
 
 .btn-cgc { 
-  background-color: #D32F2F; /* Red color */
+  background-color: #D32F2F; 
   color: #ffffff; 
   border: 1px solid rgba(211, 47, 47, 0.6);
 }
@@ -185,15 +220,17 @@ details[open] summary::after { content: "▲"; }
 }
 
 .home-btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  padding: 14px;
+  padding: 24px 14px; /* Doubled height */
   background-color: #ffffff;
   color: #111111;
   text-align: center;
   text-decoration: none;
-  font-weight: 700;
-  border-radius: 20px; /* Rounder corners */
+  font-weight: 500;   /* Thinner text */
+  border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
   transition: background 0.2s ease;
