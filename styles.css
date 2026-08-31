@@ -57,7 +57,7 @@ body::before {
 /* Card Name Header */
 .card-name {
   font-size: 1.4rem;
-  font-weight: 500; /* Made thinner */
+  font-weight: 500;
   text-align: center;
   margin-bottom: 24px;
   color: #FFCB05;
@@ -83,7 +83,7 @@ body::before {
 
 .section-title-text {
   font-size: 1.2rem;
-  font-weight: 500; /* Made thinner */
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: #ffffff;
@@ -100,17 +100,16 @@ body::before {
 /* Accordion / Dropdown Base Styling */
 details {
   width: 100%;
-  border-radius: 20px; /* Matching rounded corners */
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
   overflow: hidden;
   backdrop-filter: blur(4px);
   transition: transform 0.1s ease;
 }
 
 summary {
-  padding: 24px 14px; /* Doubled height to match buttons */
-  font-weight: 400;   /* Made thinner */
-  font-size: 1rem;
+  padding: 24px 14px;
+  font-weight: 400;
+  font-size: 1.425rem; /* 50% larger text */
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -121,41 +120,43 @@ summary {
 summary::-webkit-details-marker { display: none; }
 summary::after {
   content: "▼";
-  font-size: 0.75rem;
+  font-size: 1rem;
   position: absolute;
   right: 20px;
 }
 details[open] summary::after { content: "▲"; }
 
-/* Dropdown Specific Brand Colors */
+/* --- 1. BECKETT (BGS) DROPDOWN BOX --- */
 details.bgs-dropdown {
-  background-color: #D4AF37;
-  border-color: rgba(212, 175, 55, 0.6);
+  background-color: rgba(0, 0, 0, 0.85); /* Opaque black background */
+  border: 2px solid #D4AF37;              /* Gold border */
 }
 details.bgs-dropdown summary {
-  color: #111111; /* Dark text for contrast on gold */
+  color: #ffffff;                         /* White wording */
 }
 details.bgs-dropdown summary::after {
-  color: #111111;
+  color: #D4AF37;
 }
 
+/* --- 2. PSA DROPDOWN BOX --- */
 details.psa-dropdown {
-  background-color: #0D2C54;
-  border-color: rgba(13, 44, 84, 0.6);
+  background-color: transparent;          /* Transparent background */
+  border: 4px solid #D32F2F;              /* Thick red border */
 }
 details.psa-dropdown summary {
-  color: #ffffff;
+  color: #ffffff;                          /* Black wording */
 }
 details.psa-dropdown summary::after {
-  color: #ffffff;
+  color: #D32F2F;
 }
 
+/* --- 3. CGC DROPDOWN BOX --- */
 details.cgc-dropdown {
-  background-color: #D32F2F;
-  border-color: rgba(211, 47, 47, 0.6);
+  background-color: transparent;          /* Transparent background */
+  border: 4px solid #ffffff;              /* Thick black border */
 }
 details.cgc-dropdown summary {
-  color: #ffffff;
+  color: #ffffff;                          /* Black wording */
 }
 details.cgc-dropdown summary::after {
   color: #ffffff;
@@ -166,49 +167,88 @@ details.cgc-dropdown summary::after {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  background-color: rgba(0, 0, 0, 0.4); /* Darkened inner drawer background */
+  background-color: rgba(0, 0, 0, 0.4);   /* Inner drawer background */
 }
 
-/* Double Height Buttons with Thinner Text */
+/* --- BUTTON BASE STYLING (50% LARGER WORDING) --- */
 .btn {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 24px 12px; /* Doubled height (was 12px) */
+  padding: 24px 12px;
   text-align: center;
   text-decoration: none;
-  font-weight: 400;   /* Thinner wording */
-  font-size: 0.95rem;
+  font-weight: 400;
+  font-size: 1.425rem;                   /* 50% larger wording (was ~0.95rem) */
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
   transition: transform 0.1s ease;
 }
 .btn:active { transform: scale(0.98); }
 
-/* Inner Dropdown Link Button Colors */
+/* Raw Button */
 .btn-raw { 
   background-color: #2e7d32; 
   color: #ffffff; 
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-.btn-bgs { 
-  background-color: #D4AF37; 
-  color: #111111;            
-  border: 1px solid rgba(212, 175, 55, 0.5);
+/* --- BGS INNER BUTTONS --- */
+.btn-bgs-blacklabel {
+  background-color: #000000;             /* Solid black background */
+  color: #ffffff;                         /* White wording */
+  border: 1px solid #333333;
 }
 
-.btn-psa { 
-  background-color: #0D2C54; 
-  color: #ffffff; 
+.btn-bgs-pristine {
+  background-color: #B8860B;             /* Darker gold background */
+  color: #000000;                         /* Black wording */
+  border: 1px solid #996515;
+}
+
+.btn-bgs-all {
+  background-color: rgba(0, 0, 0, 0.85); /* Opaque black background */
+  color: #ffffff;                         /* White wording */
+  border: 2px solid #D4AF37;              /* Gold border */
+}
+
+/* --- PSA INNER BUTTONS --- */
+.btn-psa-10 {
+  background-color: #0D2C54;             /* Solid blue background */
+  color: #FF0000;                         /* Red wording */
   border: 1px solid rgba(13, 44, 84, 0.6);
 }
 
-.btn-cgc { 
-  background-color: #D32F2F; 
-  color: #ffffff; 
-  border: 1px solid rgba(211, 47, 47, 0.6);
+.btn-psa-9 {
+  background-color: #0D2C54;             /* Solid blue background */
+  color: #FF6666;                         /* Lighter red wording */
+  border: 1px solid rgba(13, 44, 84, 0.6);
+}
+
+.btn-psa-all {
+  background-color: transparent;          /* Transparent background */
+  color: #ffffff;                          /* Black wording */
+  border: 2px solid #D32F2F;
+}
+
+/* --- CGC INNER BUTTONS --- */
+.btn-cgc-pristine {
+  background-color: #000000;             /* Solid black background */
+  color: #D4AF37;                         /* Gold wording */
+  border: 1px solid #333333;
+}
+
+.btn-cgc-gem {
+  background-color: #ffffff;             /* Solid white background */
+  color: #000000;                         /* Black wording */
+  border: 1px solid #cccccc;
+}
+
+.btn-cgc-all {
+  background-color: transparent;          /* Transparent background */
+  color: #ffffff;                          /* Black wording */
+  border: 2px solid #ffffff;
 }
 
 /* Home Section */
@@ -224,12 +264,13 @@ details.cgc-dropdown summary::after {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 24px 14px; /* Doubled height */
+  padding: 24px 14px;
   background-color: #ffffff;
   color: #111111;
   text-align: center;
   text-decoration: none;
-  font-weight: 500;   /* Thinner text */
+  font-weight: 500;
+  font-size: 1.425rem;                   /* 50% larger wording */
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
