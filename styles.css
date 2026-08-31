@@ -197,8 +197,8 @@ details.cgc-dropdown summary::after {
 /* --- BGS INNER BUTTONS --- */
 .btn-bgs-blacklabel {
   background-color: #000000;             /* Solid black background */
-  color: #ffffff;                         /* White wording */
-  border: 1px solid #333333;
+  color: #D4AF37;                         /* White wording */
+  border: 2px solid #333333;
 }
 
 .btn-bgs-pristine {
@@ -217,12 +217,12 @@ details.cgc-dropdown summary::after {
 .btn-psa-10 {
   background-color: #0D2C54;             /* Solid blue background */
   color: #FF0000;                         /* Red wording */
-  border: 1px solid rgba(13, 44, 84, 0.6);
+  border: 2px solid rgba(13, 44, 84, 0.6);
 }
 
 .btn-psa-9 {
   background-color: #0D2C54;             /* Solid blue background */
-  color: #FF6666;                         /* Lighter red wording */
+  color: #FF0000;                         /* Lighter red wording */
   border: 1px solid rgba(13, 44, 84, 0.6);
 }
 
