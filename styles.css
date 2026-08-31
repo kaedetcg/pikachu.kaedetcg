@@ -129,7 +129,7 @@ details[open] summary::after { content: "▲"; }
 /* --- 1. BECKETT (BGS) DROPDOWN BOX --- */
 details.bgs-dropdown {
   background-color: rgba(0, 0, 0, 0.85); /* Opaque black background */
-  border: 2px solid #D4AF37;              /* Gold border */
+  border: 4px solid #D4AF37;              /* Gold border */
 }
 details.bgs-dropdown summary {
   color: #ffffff;                         /* White wording */
@@ -204,7 +204,7 @@ details.cgc-dropdown summary::after {
 .btn-bgs-pristine {
   background-color: #B8860B;             /* Darker gold background */
   color: #000000;                         /* Black wording */
-  border: 1px solid #996515;
+  border: 2px solid #996515;
 }
 
 .btn-bgs-all {
@@ -229,20 +229,20 @@ details.cgc-dropdown summary::after {
 .btn-psa-all {
   background-color: transparent;          /* Transparent background */
   color: #ffffff;                          /* Black wording */
-  border: 2px solid #D32F2F;
+  border: 1px solid #D32F2F;
 }
 
 /* --- CGC INNER BUTTONS --- */
 .btn-cgc-pristine {
   background-color: #000000;             /* Solid black background */
   color: #D4AF37;                         /* Gold wording */
-  border: 1px solid #333333;
+  border: 2px solid #333333;
 }
 
 .btn-cgc-gem {
   background-color: #ffffff;             /* Solid white background */
   color: #000000;                         /* Black wording */
-  border: 1px solid #cccccc;
+  border: 2px solid #cccccc;
 }
 
 .btn-cgc-all {
