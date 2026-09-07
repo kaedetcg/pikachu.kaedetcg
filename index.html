@@ -4,86 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>pikachu.kaedetcg | Inventory</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: "Microsoft YaHei", sans-serif;
-      background-color: #121212;
-      color: #ffffff;
-      display: flex;
-      justify-content: center;
-      min-height: 100vh;
-    }
-    .container {
-      width: 100%;
-      max-width: 480px;
-      padding: 24px 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .logo {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-      margin-bottom: 8px;
-    }
-    .title {
-      font-size: 1.4rem;
-      margin-bottom: 24px;
-      text-align: center;
-      color: #FFCB05;
-      font-weight: 500;
-    }
-    .era-section {
-      width: 100%;
-      margin-bottom: 12px;
-    }
-    details {
-      background-color: rgba(20, 20, 20, 0.7);
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-    }
-    summary {
-      padding: 16px;
-      font-weight: 500;
-      font-size: 1.1rem;
-      cursor: pointer;
-      background-color: rgba(45, 45, 45, 0.9);
-      color: #ffffff;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    summary::-webkit-details-marker { display: none; }
-    summary::after {
-      content: "▼";
-      font-size: 0.8rem;
-      color: #888;
-    }
-    details[open] summary::after { content: "▲"; }
-    
-    .card-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      padding: 14px;
-    }
-    .card-btn {
-      display: block;
-      width: 100%;
-      padding: 14px;
-      background-color: #2a2a2a;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: 400;
-      text-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-  </style>
+  <link rel="stylesheet" href="style-front.css">
 </head>
 <body>
 
@@ -95,87 +16,124 @@
     <div class="era-section">
       <details>
         <summary>Mega Evolution Era (2025 - now)</summary>
-          <summary>Mega Evolution Promo</summary>
+        <div class="era-content">
+          <!-- Sub-division: Mega Evolution Promo -->
+          <details class="sub-details">
+            <summary class="sub-summary">Mega Evolution Promo</summary>
             <div class="card-list">
               <a href="Cards/Mega/133-M-P/" class="card-btn">Pikachu 133/M-P</a>
               <a href="Cards/Mega/132-M-P/" class="card-btn">Pikachu 132/M-P</a>
               <a href="Cards/Mega/131-M-P/" class="card-btn">Pikachu 131/M-P</a>
               <a href="Cards/Mega/020-M-P/" class="card-btn">McDonald Promo Pikachu 020/M-P</a>
-              
             </div>
-          <summary>30th Celebration</summary>
+          </details>
+
+          <!-- Sub-division: 30th Celebration -->
+          <details class="sub-details">
+            <summary class="sub-summary">30th Celebration</summary>
+            <div class="card-list">
+              <!-- Add cards here -->
+            </div>
+          </details>
+        </div>
       </details>
     </div>
+
     <!-- Scarlet & Violet Era Section -->
     <div class="era-section">
       <details>
         <summary>Scarlet & Violet Era (2023 - 2025)</summary>
-        <div class="card-list">
-          <a href="Cards/Scarlet&Violet/289-SV-P/" class="card-btn">Fukuoka Pikachu 289/SV-P</a>
-          <a href="Cards/Scarlet&Violet/261-SV-P/" class="card-btn">Hiroshima Pikachu 261/SV-P</a>
-          <a href="Cards/Scarlet&Violet/260-SV-P/" class="card-btn">Tohoku Pikachu 260/SV-P</a>
+        <div class="era-content">
+          <details class="sub-details">
+            <summary class="sub-summary">Promos & Special Sets</summary>
+            <div class="card-list">
+              <a href="Cards/Scarlet&Violet/289-SV-P/" class="card-btn">Fukuoka Pikachu 289/SV-P</a>
+              <a href="Cards/Scarlet&Violet/261-SV-P/" class="card-btn">Hiroshima Pikachu 261/SV-P</a>
+              <a href="Cards/Scarlet&Violet/260-SV-P/" class="card-btn">Tohoku Pikachu 260/SV-P</a>
+            </div>
+          </details>
         </div>
       </details>
     </div>
+
     <!-- Sword & Shield Era Section -->
     <div class="era-section">
       <details>
         <summary>Sword & Shield Era (2020 - 2023)</summary>
-        <div class="card-list">
-          <a href="Cards/Sword&Shield/147-S-P/" class="card-btn">Kanazawa Pikachu 147/S-P</a>
-          <a href="Cards/Sword&Shield/144-S-P/" class="card-btn">Kanazawa Pikachu 144/S-P</a>
-          <a href="Cards/Sword&Shield/124-S-P/" class="card-btn">124/S-P</a>
-          <a href="Cards/Sword&Shield/002-S-P/" class="card-btn">Shibuya Pikachu 124/S-P</a>
+        <div class="era-content">
+          <details class="sub-details">
+            <summary class="sub-summary">Promos & Special Sets</summary>
+            <div class="card-list">
+              <a href="Cards/Sword&Shield/147-S-P/" class="card-btn">Kanazawa Pikachu 147/S-P</a>
+              <a href="Cards/Sword&Shield/144-S-P/" class="card-btn">Kanazawa Pikachu 144/S-P</a>
+              <a href="Cards/Sword&Shield/124-S-P/" class="card-btn">124/S-P</a>
+              <a href="Cards/Sword&Shield/002-S-P/" class="card-btn">Shibuya Pikachu 124/S-P</a>
+            </div>
+          </details>
         </div>
       </details>
     </div>
+
     <!-- Sun & Moon Era Section -->
     <div class="era-section">
       <details>
         <summary>Sun & Moon Era (2017 - 2019)</summary>
-        <div class="card-list">
-          <!-- Links directly to the new subfolder -->
-          <a href="Cards/Sun&Moon/283-SM-P/" class="card-btn">Yokohama Pikachu 283/SM-P</a>
-          <a href="Cards/Sun&Moon/282-SM-P/" class="card-btn">Yokohama Pikachu 282/SM-P</a>
-          <a href="Cards/Sun&Moon/281-SM-P/" class="card-btn">Yokohama Pikachu 281/SM-P</a>
-          <a href="Cards/Sun&Moon/280-SM-P/" class="card-btn">Yokohama Pikachu 280/SM-P</a>
-          <a href="Cards/Sun&Moon/014-SM-P/" class="card-btn">Pretend Grunt Pikachu 014/SM-P</a>
-          <a href="Cards/Sun&Moon/013-SM-P/" class="card-btn">Pretend Team Skull Pikachu 013/SM-P</a>
-          <a href="Cards/Sun&Moon/005-SM-P/" class="card-btn">Sapporo Pikachu 005/SM-P</a>
+        <div class="era-content">
+          <details class="sub-details">
+            <summary class="sub-summary">Promos & Special Sets</summary>
+            <div class="card-list">
+              <a href="Cards/Sun&Moon/283-SM-P/" class="card-btn">Yokohama Pikachu 283/SM-P</a>
+              <a href="Cards/Sun&Moon/282-SM-P/" class="card-btn">Yokohama Pikachu 282/SM-P</a>
+              <a href="Cards/Sun&Moon/281-SM-P/" class="card-btn">Yokohama Pikachu 281/SM-P</a>
+              <a href="Cards/Sun&Moon/280-SM-P/" class="card-btn">Yokohama Pikachu 280/SM-P</a>
+              <a href="Cards/Sun&Moon/014-SM-P/" class="card-btn">Pretend Grunt Pikachu 014/SM-P</a>
+              <a href="Cards/Sun&Moon/013-SM-P/" class="card-btn">Pretend Team Skull Pikachu 013/SM-P</a>
+              <a href="Cards/Sun&Moon/005-SM-P/" class="card-btn">Sapporo Pikachu 005/SM-P</a>
+            </div>
+          </details>
         </div>
       </details>
     </div>
+
     <!-- X & Y Era Section -->
     <div class="era-section">
       <details>
         <summary>X & Y Era (2014 - 2016)</summary>
-        <div class="card-list">
-          <!-- Links directly to the new subfolder -->
-          <a href="Cards/X&Y/097-XY-P/" class="card-btn">Warm Pikachu 097/XY-P</a>
-          <a href="Cards/X&Y/096-XY-P/" class="card-btn">Warm Pikachu 096/XY-P</a>
-          <a href="Cards/X&Y/095-XY-P/" class="card-btn">Warm Pikachu 095/XY-P</a>
-          <a href="Cards/X&Y/094-XY-P/" class="card-btn">Warm Pikachu 094/XY-P</a>
-          <a href="Cards/X&Y/070-XY-P/" class="card-btn">Outbreak Pikachu 070/XY-P</a>
-          <a href="Cards/X&Y/069-XY-P/" class="card-btn">Outbreak Pikachu 069/XY-P</a>
-          <a href="Cards/X&Y/068-XY-P/" class="card-btn">Outbreak Pikachu 068/XY-P</a>
-
+        <div class="era-content">
+          <details class="sub-details">
+            <summary class="sub-summary">Promos & Special Sets</summary>
+            <div class="card-list">
+              <a href="Cards/X&Y/097-XY-P/" class="card-btn">Warm Pikachu 097/XY-P</a>
+              <a href="Cards/X&Y/096-XY-P/" class="card-btn">Warm Pikachu 096/XY-P</a>
+              <a href="Cards/X&Y/095-XY-P/" class="card-btn">Warm Pikachu 095/XY-P</a>
+              <a href="Cards/X&Y/094-XY-P/" class="card-btn">Warm Pikachu 094/XY-P</a>
+              <a href="Cards/X&Y/070-XY-P/" class="card-btn">Outbreak Pikachu 070/XY-P</a>
+              <a href="Cards/X&Y/069-XY-P/" class="card-btn">Outbreak Pikachu 069/XY-P</a>
+              <a href="Cards/X&Y/068-XY-P/" class="card-btn">Outbreak Pikachu 068/XY-P</a>
+            </div>
+          </details>
         </div>
       </details>
     </div>
+
     <!-- Black & White Era Section -->
     <div class="era-section">
       <details>
         <summary>Black & White Era (2011 – 2013)</summary>
-        <div class="card-list">
-          <!-- Links directly to the new subfolder -->
-
+        <div class="era-content">
+          <details class="sub-details">
+            <summary class="sub-summary">Promos & Special Sets</summary>
+            <div class="card-list">
+              <!-- Add cards here -->
+            </div>
+          </details>
         </div>
       </details>
     </div>
-    <div class="container">
+
     <!-- Logo Link back to Root Landing Page -->
     <a href="https://www.instagram.com/pikachu.kaedetcg" class="logo-link">
-      <img src="images/logo2.webp" alt="Business Logo" class="logo">
+      <img src="images/logo2.webp" alt="Business Logo" class="logo footer-logo">
     </a>
   </div>
 
