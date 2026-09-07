@@ -1,0 +1,125 @@
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+body {
+  font-family: "Microsoft YaHei", sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.footer-logo {
+  margin-top: 16px;
+}
+
+.title {
+  font-size: 1.4rem;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #FFCB05;
+  font-weight: 500;
+}
+
+.era-section {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+details {
+  background-color: rgba(20, 20, 20, 0.7);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+summary {
+  padding: 16px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: rgba(45, 45, 45, 0.9);
+  color: #ffffff;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+summary::-webkit-details-marker { 
+  display: none; 
+}
+
+summary::after {
+  content: "▼";
+  font-size: 0.8rem;
+  color: #888;
+}
+
+details[open] > summary::after { 
+  content: "▲"; 
+}
+
+.era-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sub-details {
+  background-color: rgba(30, 30, 30, 0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sub-summary {
+  padding: 12px 14px;
+  font-size: 1rem;
+  background-color: rgba(60, 60, 60, 0.6);
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+}
+
+.card-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background-color: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 400;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.card-btn:hover {
+  background-color: #383838;
+}
